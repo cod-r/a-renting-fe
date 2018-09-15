@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>car-list</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+    <ion-list>
+        <ion-item *ngFor="let car of cars">
+            <ion-card>
+                <img [src]="car.imageUrl"/>
+                <ion-card-content>
+                    <ion-card-title>
+                        {{car.model}}
+                    </ion-card-title>
+                    <ion-row>
+                        <ion-col>
+                            <ion-row nowrap justify-content-start>
+                                <ion-icon src="./src/assets/icon/gas-station.svg" padding-end="0.5px"></ion-icon>
+                                Benzina
+                            </ion-row>
+                        </ion-col>
+                        <ion-col>
+                            <ion-row nowrap justify-content-start>
+                                <ion-icon src="./src/assets/icon/car-door.svg" padding-end="0.5px"></ion-icon>
+                                {{car.doorNumber}}
+                            </ion-row>
+                        </ion-col>
+                        <ion-col>
+                            <ion-row nowrap justify-content-start>
+                                <ion-icon src="./src/assets/icon/gearbox.svg" padding-end="0.5px"></ion-icon>
+                                {{car.transmission}}
+                            </ion-row>
+                        </ion-col>
+                        <ion-col>
+                            <ion-row nowrap justify-content-start>
+                                <ion-icon src="./src/assets/icon/seat.svg" padding-end="0.5px"></ion-icon>
+                                {{car.seats}}
+                            </ion-row>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+        </ion-item>
+    </ion-list>
+
+</ion-content>
