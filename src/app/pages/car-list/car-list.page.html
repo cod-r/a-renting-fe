@@ -14,31 +14,32 @@
                         {{car.model}}
                     </ion-card-title>
                     <ion-row>
-                        <ion-col>
+                        <ion-col size="6">
                             <ion-row nowrap justify-content-start>
-                                <ion-icon src="./src/assets/icon/gas-station.svg" padding-end="0.5px"></ion-icon>
+                                <ion-icon src="assets/icon/gas-station.svg" padding-end="0.5px"></ion-icon>
                                 Benzina
                             </ion-row>
                         </ion-col>
-                        <ion-col>
+                        <ion-col size="6">
                             <ion-row nowrap justify-content-start>
-                                <ion-icon src="./src/assets/icon/car-door.svg" padding-end="0.5px"></ion-icon>
+                                <ion-icon src="assets/icon/car-door.svg" padding-end="0.5px"></ion-icon>
                                 {{car.doorNumber}}
                             </ion-row>
                         </ion-col>
-                        <ion-col>
+                        <ion-col size="6">
                             <ion-row nowrap justify-content-start>
-                                <ion-icon src="./src/assets/icon/gearbox.svg" padding-end="0.5px"></ion-icon>
+                                <ion-icon src="assets/icon/gearbox.svg" padding-end="0.5px"></ion-icon>
                                 {{car.transmission}}
                             </ion-row>
                         </ion-col>
-                        <ion-col>
+                        <ion-col size="6">
                             <ion-row nowrap justify-content-start>
-                                <ion-icon src="./src/assets/icon/seat.svg" padding-end="0.5px"></ion-icon>
+                                <ion-icon src="assets/icon/seat.svg" padding-end="0.5px"></ion-icon>
                                 {{car.seats}}
                             </ion-row>
                         </ion-col>
                     </ion-row>
+                    <ion-button expand="full" class="ion-color-success">Rent for {{car.pricePerHour}}$/hour</ion-button>
                 </ion-card-content>
             </ion-card>
         </ion-item>
