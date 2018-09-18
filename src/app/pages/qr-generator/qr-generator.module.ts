@@ -4,12 +4,14 @@ import {FormsModule} from '@angular/forms';
 import {Routes, RouterModule} from '@angular/router';
 
 import {IonicModule} from '@ionic/angular';
-import {CarListPage} from './car-list.page';
+
+import {QrGeneratorPage} from './qr-generator.page';
+import {QRCodeModule} from 'angularx-qrcode';
 
 const routes: Routes = [
     {
         path: '',
-        component: CarListPage
+        component: QrGeneratorPage
     }
 ];
 
@@ -18,9 +20,10 @@ const routes: Routes = [
         CommonModule,
         FormsModule,
         IonicModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
+        QRCodeModule
     ],
-    declarations: [CarListPage]
+    declarations: [QrGeneratorPage]
 })
-export class CarListPageModule {
+export class QrGeneratorPageModule {
 }

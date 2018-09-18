@@ -1,0 +1,11 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>qr-generator</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <qrcode [qrdata]="'Your QR code data string'" [size]="256" [level]="'M'"></qrcode>
+    </ion-card>
+</ion-content>
