@@ -29,9 +29,21 @@ export class CarListPage implements OnInit {
         this.carListService.getCars().subscribe(
             (cars: CarModel[]) => {
                 this.cars = cars;
+                this.setImageUrl(this.cars);
             }
         );
+    }
 
+    private setImageUrl(cars: CarModel[]) {
+        cars.forEach(car => {
+            if (car.model === 'Skoda Rapid') {
+                car.imageUrl = 'assets/img/skoda-rapid.png';
+            } else if (car.model === 'Skoda Citigo') {
+                car.imageUrl = 'assets/img/skoda-citigo.png';
+            } else if (car.model === 'VW Transporter') {
+                car.imageUrl = 'assets/img/vw-transporter-shuttler.png';
+            }
+        });
     }
 
 }
