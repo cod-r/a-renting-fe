@@ -10,9 +10,18 @@
     <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
-    <ion-list *ngFor="let dataEntry of myData">
-        <ion-item>
-            <ion-label>{{dataEntry}}</ion-label>
-        </ion-item>
-    </ion-list>
+
+    <ion-grid *ngFor="let dataEntry of myData">
+        <ion-row>
+            <ion-col>
+                {{dataEntry.data1}}
+            </ion-col>
+            <ion-col>
+                {{dataEntry.data2}}
+            </ion-col>
+            <ion-col>
+                {{dataEntry.data3}}
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

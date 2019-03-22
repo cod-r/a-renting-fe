@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {CustomData} from './CustomData';
 
 @Component({
     selector: 'app-rest',
@@ -14,26 +15,26 @@ export class RestPage implements OnInit {
     private apiUrl = 'http://10.6.1.47:8084/rest-demo';
     // private apiUrl = 'http://localhost:8084/rest-demo';
 
-    myData: String[];
+    myData: CustomData[];
 
     ngOnInit() {
         this.getData().subscribe(
-            (data: String[]) => {
+            (data: CustomData[]) => {
+                this.myData = [];
                 this.myData = data;
-                console.log(data);
             }
         );
     }
 
-    getData(): Observable<String[]> {
-        return this.http.get<String[]>(this.apiUrl);
+    getData(): Observable<CustomData[]> {
+        return this.http.get<CustomData[]>(this.apiUrl);
     }
 
     doRefresh(event) {
         this.getData().subscribe(
-            (data: String[]) => {
+            (data: CustomData[]) => {
+                this.myData = [];
                 this.myData = data;
-                console.log(data);
             }
         );
         setTimeout(() => {
